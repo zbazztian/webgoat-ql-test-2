@@ -1,0 +1,6 @@
+name: "Test"
+
+disable-default-queries: false
+
+queries:
+  - uses: ./security-all.qls

@@ -1,0 +1,25 @@
+- description: All Java Security Queries
+- queries: .
+  from: codeql/java-queries
+- include:
+    kind:
+      - problem
+      - path-problem
+    tags contain: security
+- include:
+    kind:
+    - diagnostic
+- include:
+    kind:
+    - metric
+    tags contain:
+    - summary
+- exclude:
+    deprecated: //
+- exclude:
+    query path:
+      - Metrics/Summaries/FrameworkCoverage.ql
+      - /Diagnostics/Internal/.*/
+- exclude:
+    tags contain:
+      - model-generator

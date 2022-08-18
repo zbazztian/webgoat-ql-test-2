@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'java', 'javascript' ]
+        language: [ 'java' ]
 
     steps:
     - name: Checkout repository
@@ -31,27 +31,19 @@ jobs:
         java-version: '17'
         java-package: jdk
         architecture: x64
-      if: matrix.language == 'java'
 
     - name: Delombok
       uses: ghas-trials/delombok@main
-      if: matrix.language == 'java'
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
         debug: true
-#        config-file: advanced-security/config/disable-default-queries@true
-#        packs: >
-#          ghas-trials/${{ matrix.language }}-queries:codeql-suites/${{ matrix.language }}-security-all.qls,
-#          ghas-trials/${{ matrix.language }}-queries:codeql-suites/${{ matrix.language }}-security-experimental.qls
-        queries: ghas-trials/poc-setups/suites/${{ matrix.language }}-security-all.qls@main
+        config-file: .github/codeql-config.yml
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v2
-      if: matrix.language == 'java'
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
-
