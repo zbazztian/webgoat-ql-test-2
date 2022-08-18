@@ -1,6 +1,6 @@
 name: "Test"
 
-disable-default-queries: false
+disable-default-queries: true
 
 queries:
   - uses: ./security-all.qls

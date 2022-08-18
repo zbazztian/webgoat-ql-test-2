@@ -1,6 +1,6 @@
 - description: All Java Security Queries
 - queries: .
-  from: codeql/java-queries
+  from: zbazztian/java-queries-string-taint-steps
 - include:
     kind:
       - problem
