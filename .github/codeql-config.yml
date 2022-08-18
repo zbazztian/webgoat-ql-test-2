@@ -3,4 +3,4 @@ name: "Test"
 disable-default-queries: true
 
 queries:
-  - uses: .github/security-all.qls
+  - uses: ./.github/security-all.qls
