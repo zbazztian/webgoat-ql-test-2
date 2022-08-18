@@ -4,3 +4,4 @@ disable-default-queries: true
 
 queries:
   - uses: ./.github/security-all.qls
+
