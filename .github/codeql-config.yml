@@ -1,9 +1,9 @@
 name: "Test"
 
-#disable-default-queries: true
-#packs:
-#  java:
-#    - zbazztian/java-queries-spring-taint-steps:codeql-suites/security-all.qls
+disable-default-queries: true
+packs:
+  java:
+    - zbazztian/java-queries-spring-taint-steps:codeql-suites/security-all.qls
 
-queries:
-  - uses: ./.github/security-all.qls
+#queries:
+#  - uses: ./.github/security-all.qls
