@@ -1,7 +1,7 @@
 name: "Test"
 
-#disable-default-queries: true
-disable-default-queries: false
+disable-default-queries: true
+#disable-default-queries: false
 
 packs:
   java:
@@ -9,4 +9,3 @@ packs:
 
 #queries:
 #  - uses: ./.github/security-all.qls
-
