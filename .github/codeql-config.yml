@@ -5,5 +5,6 @@ packs:
   java:
     - zbazztian/java-queries-spring-taint-steps:codeql-suites/security-all.qls
 
+
 #queries:
 #  - uses: ./.github/security-all.qls
