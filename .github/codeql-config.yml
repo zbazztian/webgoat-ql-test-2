@@ -3,10 +3,10 @@ name: "Test"
 #disable-default-queries: true
 disable-default-queries: false
 
-#packs:
-#  java:
-#    - zbazztian/java-queries-string-taint-steps:codeql-suites/security-all.qls
+packs:
+  java:
+    - zbazztian/java-queries-spring-taint-steps:codeql-suites/security-all.qls
 
-queries:
-  - uses: ./.github/security-all.qls
+#queries:
+#  - uses: ./.github/security-all.qls
 
